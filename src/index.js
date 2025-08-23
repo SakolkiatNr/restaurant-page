@@ -1,7 +1,9 @@
+// Import modules
 import "./style.css";
-import { deezNut } from "./test";
+import { activateNavBtns } from "./test";
+
+console.log('BRO');
+activateNavBtns();
 
 
-console.log('Brooooo');
-console.log('broski');
-console.log(deezNut);
+
