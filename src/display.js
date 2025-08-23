@@ -1,12 +1,12 @@
 // import pages
-import { home } from "./pages/home";
+import { renderHome } from "./pages/home";
 import { menu } from "./pages/menu";
 import { contact } from "./pages/contact";
 
 export default class ScreenDisplay {
 
     pages = {
-        home,
+        home: renderHome,
         menu,
         contact,
     }
@@ -17,25 +17,27 @@ export default class ScreenDisplay {
     activateNavBtns() {
         const btns = document.querySelector('#nav-btns');
         btns.addEventListener('click', (e) => {
-            this.updateDisplay();
             
             // replace button-btn to button
             const page = e.target.id.replace(this.regex, '$1');
-            // console.log(page);
             this.updateDisplay(page);
         })   
     }
 
+    containerTarget = document.querySelector('#content-container');
+
     clearScreen() {
-        const containerTarget = document.querySelector('#content-container')
-        containerTarget.innerHTML = '';
+        this.containerTarget.innerHTML = '';
     }
 
     updateDisplay(page) {
         this.clearScreen();
 
         if (page && this.pages[page]) {
-            console.log(this.pages[page]);
+            // if (page === 'home') {
+            //     renderHome(this.containerTarget);
+            // }
+            this.pages[page](this.containerTarget);
         }
     }
 }
