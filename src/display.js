@@ -12,14 +12,14 @@ export default class ScreenDisplay {
     }
 
     // remove -btns
-    regex = /^(.*?)-btn$/;
+    #regex = /^(.*?)-btn$/;
     
     activateNavBtns() {
         const btns = document.querySelector('#nav-btns');
         btns.addEventListener('click', (e) => {
             
             // replace button-btn to button
-            const page = e.target.id.replace(this.regex, '$1');
+            const page = e.target.id.replace(this.#regex, '$1');
             this.updateDisplay(page);
         })   
     }
@@ -37,6 +37,12 @@ export default class ScreenDisplay {
         if (page && this.pages[page]) {
             this.pages[page](this.containerTarget);
         }
+    }
+
+    render() {
+        // set home page as default when landing
+        this.activateNavBtns();
+        this.updateDisplay('home');
     }
 }
 
