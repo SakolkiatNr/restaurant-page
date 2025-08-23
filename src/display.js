@@ -27,7 +27,7 @@ export default class ScreenDisplay {
     activeHomeBtn() {
         const btn = document.querySelector('.btn');
         btn.addEventListener('click', (e) => {
-            this.updateDisplay(e.target.id);
+            this.updateDisplay('menu');
         });
     }
 
@@ -45,6 +45,7 @@ export default class ScreenDisplay {
         if (page && this.pages[page]) {
             this.pages[page](this.#containerTarget);
         }
+        if (page === 'home') this.activeHomeBtn();
     }
 
     render() {
