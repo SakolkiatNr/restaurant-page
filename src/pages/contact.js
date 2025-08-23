@@ -1,12 +1,9 @@
-export function renderContact(container) {
-    const contact = document.createElement('h1');
-    contact.classList.add('lmao');
-    contact.textContent = 'Contact';
+export function ntact(container) {
 
-    container.append(contact);
+    container.append(createContactCard());
 }
 
-function lmao() {
+function createContactCard() {
 
     const cardContainer = document.createElement('div');
     cardContainer.classList.add('contact-container');
@@ -17,7 +14,7 @@ function lmao() {
 
     // contact info top
     const contactInfo = document.createElement('div');
-    contactInfo.classList.add('contact-info');
+    contactInfo.classList.add('contact-info-header');
 
     // contact krabby
     const conHeader = document.createElement('h1');
@@ -36,11 +33,15 @@ function lmao() {
     phone.classList.add('contact-phone');
     phone.textContent = `1-800-KRABBY \n(Squidward might pick up.`;
 
-    contactInfo.append(email, address, phone);
+    contactInfo.append(conHeader, email, address, phone);
 
-    // ps section
+    // contact info ps section
+    const psSection = document.createElement('p');
+    psSection.classList.add('contact-ps');
+    psSection.textContent = 'We will not reveal the secret formula, no matter how nicely you ask.';
 
-    // funny map location
-
-    ˇ
+    contactInfoContainer.append(contactInfo, psSection);
+    
+    cardContainer.append(contactInfoContainer);
+    return cardContainer;
 }
