@@ -11,6 +11,7 @@ export function renderHome(container) {
 
     const btn = document.createElement('button');
     btn.classList.add('btn');
+    btn.setAttribute('id', 'menu')
     btn.textContent = 'Feed Me Krabby Patties';
 
     container.append(text1, text2, btn);

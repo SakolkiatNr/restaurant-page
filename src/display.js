@@ -23,6 +23,15 @@ export default class ScreenDisplay {
         })   
     }
 
+    // add Home Button listener
+    activeHomeBtn() {
+        const btn = document.querySelector('.btn');
+        btn.addEventListener('click', (e) => {
+            this.updateDisplay(e.target.id);
+        });
+    }
+
+
     #containerTarget = document.querySelector('#content-container');
 
     clearScreen() {
@@ -42,5 +51,6 @@ export default class ScreenDisplay {
         // set home page as default when landing
         this.activateNavBtns();
         this.updateDisplay('home');
+        this.activeHomeBtn();
     }
 }

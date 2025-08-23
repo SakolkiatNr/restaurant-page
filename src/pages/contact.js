@@ -1,4 +1,4 @@
-export function ntact(container) {
+export function renderContact(container) {
 
     container.append(createContactCard());
 }
