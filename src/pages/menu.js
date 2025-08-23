@@ -1,11 +1,16 @@
 export function renderMenu(container) {
     const heading = document.createElement('h1');
-    heading.classList.add('nonsense');
+    heading.classList.add('menu-header');
     heading.textContent = 'Our Selections';
     container.append(heading);
 
+    const menuObj = new Menu();
 
-
+    // append each category element to container
+    menuData.forEach(cat => {
+        const categoryElement = menuObj.category(cat.category, cat.items);
+        container.append(categoryElement);
+    });    
 }
 
 class Menu {
@@ -20,8 +25,8 @@ class Menu {
         categoryName.textContent = `${name}`;
         category.appendChild(categoryName);
 
-
-
+        // add multiple menu to category
+        items.forEach(item => category.append(this.menu(item.name, item.desc, item.price)));
         return category;
     }
 
@@ -58,18 +63,43 @@ class Menu {
 
 const menuData = [
     {
-        category: 'Cate1',
+        category: 'Burgers & Patties',
         items: [
-            {},
-            {}
+            {name: 'Krabby Patty (Classic)', desc: 'The iconic patty everyone fights over… and Plankton desperately tries to steal.', price: '4.20 (in clams, not dollars)'},
+            {name: 'Double Krabby Patty', desc: 'Twice the patty, twice the joy, twice the regret for your diet.', price: '8.40 (or 3 jellyfish stings)'},
+            {name: 'Triple Krabby Patty', desc: 'Because one patty is never enough and two is just teasing.', price: '12.60 (plus a high-five from SpongeBob)'},
+            {name: 'Jellyfish Jelly Patty', desc: 'A zesty patty topped with jellyfish jelly… slightly shocking.', price: '6.66 (beware of static shocks)'},
         ]
-    },
-    {
-        category: 'Cat2',
+    }, {
+        category: 'Sides That Scream “Seafood',
         items: [
-            {},
-            {}
+            {name: 'Kelp Fries', desc: 'Golden, crispy, and probably greener than your average vegetable.', price: '2.99 (or one small regret)'},
+            {name: 'Seaweed Rings', desc: 'Crispy rings of ocean goodness that may or may not taste like the ocean.', price: '3.50 (includes a free squint from Squidward)'},
+            {name: 'Bikini Bottom Slaw', desc: 'Shredded veggies tossed in secret sauce, perfect for pretending to be healthy.', price: '1.99 (vegan seal of approval optional)'},
+            {name: 'Barnacle Chips', desc: 'Crunchy, salty, and clinging to your teeth like… barnacles.', price: '3.25 (you may need dental floss)'},
+        ]
+    }, {
+        category: 'Ocean Beverages',
+        items: [
+            {name: 'Coral Cola', desc: 'Fizzing, popping, and suspiciously coral-colored.', price: '1.50 (limited coral supply!)'},
+            {name: 'Seafoam Shake', desc: 'Like drinking a cloud, if clouds were ocean flavored.', price: '2.75 (clouds sold separately)'},
+            {name: 'Diet Water', desc: 'All the hydration, none of the taste.', price: '0.99 (almost free, because it’s just water)'},
+            {name: 'Oyster Juice', desc: 'Brave souls only. Salty with a hint of regret.', price: '4.44 (warning: tears included)'},
+        ]
+    }, {
+        category: 'Desserts Under the Sea',
+        items: [
+            {name: 'Chum-Free Sundae', desc: 'Sweet, creamy, and guaranteed chum-free.', price: '3.33 (Plankton approved… maybe)'},
+            {name: 'Bubble Gum Ice Cream', desc: 'Ice cream that blows bubbles… literally.', price: '2.22 (bubbles may pop unexpectedly)'},
+            {name: 'Goo Lagoon Float', desc: 'A fizzy, frothy drink with a side of questionable lagoon vibes.', price: '3.75 (slightly slimy)'},
+            {name: 'Spongecake', desc: 'Light, fluffy, and suspiciously absorbent. Not included: SpongeBob.', price: '1.99 (soaked in fun)'},
+        ]
+    }, {
+        category: 'Specials Nobody Asked For',
+        items: [
+            {name: 'Squidward’s Sad Salad', desc: 'Lettuce only. Guaranteed to lower your mood.', price: '0.01 (because sadness is cheap)'},
+            {name: 'The Chum Burger', desc: 'A nightmare on a bun. We crossed it off the menu for your safety.', price: '999.99 (for insurance purposes)'},
+            {name: 'Mystery Bucket Meal', desc: 'Chef’s choice… but sometimes Plankton sneaks in a surprise.', price: '7.77 (contents may include regret)'},
         ]
     }
-];
-
+]
