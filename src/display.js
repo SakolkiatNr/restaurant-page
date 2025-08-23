@@ -1,13 +1,13 @@
 // import pages
 import { renderHome } from "./pages/home";
-import { menu } from "./pages/menu";
+import { renderMenu } from "./pages/menu";
 import { contact } from "./pages/contact";
 
 export default class ScreenDisplay {
 
     pages = {
         home: renderHome,
-        menu,
+        menu: renderMenu,
         contact,
     }
 
@@ -33,10 +33,8 @@ export default class ScreenDisplay {
     updateDisplay(page) {
         this.clearScreen();
 
+        // render page
         if (page && this.pages[page]) {
-            // if (page === 'home') {
-            //     renderHome(this.containerTarget);
-            // }
             this.pages[page](this.containerTarget);
         }
     }

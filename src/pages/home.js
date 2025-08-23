@@ -1,6 +1,6 @@
 // Landing page elements
 export function renderHome(container) {
-    
+
     const text1 = document.createElement('h1');
     text1.classList.add('test', 'test2');
     text1.textContent = 'The finest eating establishment ever established for eating';
