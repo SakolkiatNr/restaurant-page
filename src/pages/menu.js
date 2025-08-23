@@ -9,10 +9,43 @@ export function renderMenu(container) {
 class Menu {
     
     category(name) {
-        const categoryName = document.createElement('h1');
-        categoryName.classList.add('cate-name');
-        categoryName.textContent = `${name}`;
+        // change it to section
+        const category = document.createElement('h2');
+        category.classList.add('cate-name');
+        category.textContent = `${name}`;
       
-        return categoryName;
+        return category;
+    }
+
+    menu(name, desc, price) {
+        // menu card
+        const menuContainer = document.createElement('dl');
+        menuContainer.classList.add('item-container');
+
+        // name
+        const menuName = document.createElement('dt');
+        menuName.classList.add('menu-name');
+        menuName.textContent = `${name}`;
+
+        // item description
+        const menuDesc = document.createElement('dd');
+        menuDesc.classList.add('menu-desc');
+        menuDesc.textContent = `${desc}`;
+        
+        const priceContainer = document.createElement('dd');
+        priceContainer.classList.add('price');
+
+        // price value
+        const priceData = document.createElement('data');
+        priceData.setAttribute('value', price);
+        priceData.classList.add('price-value');
+        priceData.textContent = `$${price}`;
+        
+        priceContainer.appendChild(priceData);
+        menuContainer.appendChild(menuName, menuDesc, priceContainer);
+
     }
 }
+
+
+
