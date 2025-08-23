@@ -1,9 +1,9 @@
 // Import modules
 import "./style.css";
-import { activateNavBtns } from "./test";
+import ScreenDisplay from "./display";
 
-console.log('BRO');
-activateNavBtns();
+const display = new ScreenDisplay();
+display.activateNavBtns();
 
 
 
