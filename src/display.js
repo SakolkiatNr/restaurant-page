@@ -11,6 +11,11 @@ export default class ScreenDisplay {
             console.log(e.target.id);
         })   
     }
+
+    clearScreen() {
+        const containerTarget = document.querySelector('#content-container')
+        containerTarget.innerHTML = '';
+    }
 }
 
 
