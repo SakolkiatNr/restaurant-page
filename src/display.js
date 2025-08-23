@@ -1,14 +1,14 @@
 // import pages
 import { renderHome } from "./pages/home";
 import { renderMenu } from "./pages/menu";
-import { contact } from "./pages/contact";
+import { renderContact } from "./pages/contact";
 
 export default class ScreenDisplay {
 
     pages = {
         home: renderHome,
         menu: renderMenu,
-        contact,
+        contact: renderContact,
     }
 
     // remove -btns
