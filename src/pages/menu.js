@@ -5,3 +5,14 @@ export function renderMenu(container) {
 
     container.append(menu);
 }
+
+class Menu {
+    
+    category(name) {
+        const categoryName = document.createElement('h1');
+        categoryName.classList.add('cate-name');
+        categoryName.textContent = `${name}`;
+      
+        return categoryName;
+    }
+}

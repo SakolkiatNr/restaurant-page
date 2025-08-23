@@ -17,8 +17,8 @@ export default class ScreenDisplay {
     activateNavBtns() {
         const btns = document.querySelector('#nav-btns');
         btns.addEventListener('click', (e) => {
+            if (!e.target.id) return;
             
-            // replace button-btn to button
             const page = e.target.id.replace(this.#regex, '$1');
             this.updateDisplay(page);
         })   
