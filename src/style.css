@@ -85,14 +85,41 @@
     margin-top: 24px;   
 
     color: var(--btn-font-color);
-    border: 1px solid white;
+    border: 1px solid var(--btn-border-clr);
 
     font-weight: bold;
 
     border-radius: 24px;
     text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
     
 }
+
+.jump-to-menu:hover {
+    color: black;
+    
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 4s ease-in-out infinite;
+    border: none;
+
+    transform: scale(1.05);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
+
+/* Button hover animations */
 
 /* HOME PAGE ----------  */
 
@@ -140,11 +167,12 @@
 
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 
 
     max-width: 270px;
+    min-height: 180px;
 }
 
 .menu-name, .price-value {
@@ -176,9 +204,24 @@
     padding: 24px;
     box-sizing: border-box;
 
-    max-width: 500px;
+    max-width: 700px;
+    min-width: 500px;
+}
+
+.contact-address {
+    white-space: pre-line;
+    margin: 6px 0;
 }
 
 .contact-ps {
     margin-top: 48px;
 }
+
+.contact-ps {
+    white-space: pre-line;
+}
+
+.contact-header {
+    margin-bottom: 12px;
+}
+

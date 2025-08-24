@@ -31,14 +31,14 @@ function createContactCard() {
 
     const phone = document.createElement('p');
     phone.classList.add('contact-phone');
-    phone.textContent = `1-800-KRABBY \n(Squidward might pick up.`;
+    phone.textContent = `1-800-KRABBY \n(Squidward might pick up.)`;
 
     contactInfo.append(conHeader, email, address, phone);
 
     // contact info ps section
     const psSection = document.createElement('p');
     psSection.classList.add('contact-ps');
-    psSection.textContent = 'We will not reveal the secret formula, no matter how nicely you ask.';
+    psSection.textContent = `We will not reveal the secret formula, \nno matter how nicely you ask.`;
 
     contactInfoContainer.append(contactInfo, psSection);
     
