@@ -4,11 +4,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif, helvetica, monospace, system-ui;
-    background-color: var(--bg-color-1);
 
     color: var(--font-color);
 }
-
+body {
+    background-color: var(--bg-color-1);
+}
 :root {
     --btn-font-size: 16px;
     --btn-font-color: white;
@@ -81,6 +82,7 @@
 }
 
 .jump-to-menu {
+    background-color: var(--bg-color-1);
     padding: 12px 24px;
     margin-top: 24px;   
 
@@ -91,7 +93,7 @@
 
     border-radius: 24px;
     text-transform: uppercase;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     
 }
 
@@ -103,7 +105,7 @@
     animation: gradient 4s ease-in-out infinite;
     border: none;
 
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 @keyframes gradient {
@@ -199,6 +201,7 @@
 }
 
 .contact-info-container {
+    /* background-color: var(--bg-color-1); */
     border: 1px solid var(--btn-border-clr);
     border-radius: 12px;
     padding: 24px;
@@ -206,6 +209,34 @@
 
     max-width: 700px;
     min-width: 500px;
+    /* opacity: 0; */
+
+    position: relative;
+    z-index: 0;
+}
+
+.contact-info-container::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    z-index: -1;
+
+    background: linear-gradient(45deg,rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(21, 17, 105, 1) 49%, rgba(9, 9, 121, 1) 61%, rgba(0, 212, 255, 1) 100%);
+    background-size: 900%;
+
+    width: calc(100% );
+    height: calc(100% );
+    filter: blur(100px);
+
+    animation: glowing 50s linear infinite;
+}
+
+@keyframes glowing {
+    /* run the background horizontally */
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
 }
 
 .contact-address {
@@ -224,4 +255,6 @@
 .contact-header {
     margin-bottom: 12px;
 }
+
+
 
