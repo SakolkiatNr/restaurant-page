@@ -1,8 +1,12 @@
-# restaurant-page
+# Krusty Krab
 
-how to install webpack
-how to install plugins
+![](/assests/krustykrab.gif)
 
-how to import, export
-learn how to establish local host by npx webpack serve
-how to bundle multiple js files
+A simple restaurant webpage focusing on module bundling and DOM manipulation
+
+## What I Learned
+- How to install and configure Webpack including plugins
+- Set up package.json and manage dependencies
+- How to bundle, import and export multiple Js files
+- How to establish a local dev server with `npx webpack serve`
+- Manage state using Js DOM manipulation (single-page app concept)
