@@ -6,7 +6,7 @@ export function renderHome(container) {
 
     const text1 = document.createElement('h1');
     text1.classList.add('main-text');
-    text1.textContent = 'The finest eating establishment ever established for eating';
+    text1.textContent = "The finest eating establishment \never established for eating";
     
     const text2 = document.createElement('h2');
     text2.classList.add('sub-head');

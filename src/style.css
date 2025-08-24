@@ -28,13 +28,17 @@
     align-items: flex-start;
 
     color: white;
-    margin: 12px;
+    margin: 24px;
 }
-
+.logo {
+    margin-left: 24px;
+}
 #nav-btns button{
     background-color: var(--bg-color-1);
     border: none;
     padding: 12px 6px;
+    margin-right: 32px;
+    margin-left: 24px;
 
     font-size: var(--btn-font-size);
     color: var(--btn-font-color);
@@ -48,7 +52,7 @@
 /* HOME PAGE ---------- */
 /* .main-text, .sub-head, .jump-to-menu */
 .home-container {
-    margin: 12px;
+    margin: 48px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,6 +64,13 @@
 .main-text {
     margin-top: 150px;
     left: 25%;
+    white-space: pre-line;
+    text-transform: uppercase;
+}
+
+.sub-head {
+    font-weight: lighter;
+    font-size: 1em;
 }
 
 .jump-to-menu {
