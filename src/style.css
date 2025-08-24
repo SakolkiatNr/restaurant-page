@@ -9,6 +9,8 @@
 
 /* .main-text, .sub-head, .jump-to-menu */
 .home-container {
-    margin: 12px;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
 }
