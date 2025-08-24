@@ -4,13 +4,46 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif, helvetica, monospace, system-ui;
+    background-color: var(--bg-color-1);
 }
-/* Navigator  */
+
+:root {
+    --btn-font-size: 16px;
+    --btn-font-color: white;
+
+    --bg-color-1: black;
+    --font-color: white;
+
+
+}
+
+
+/* Navigator ---------- */
 .nav-container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    color: white;
+    margin: 12px;
 }
 
+#nav-btns button{
+    background-color: var(--bg-color-1);
+    border: none;
+    padding: 12px 6px;
+
+    font-size: var(--btn-font-size);
+    color: var(--btn-font-color);
+    font-weight: bold;
+}
+
+
+/* Navigator ---------- */
+
+
+/* HOME PAGE ---------- */
 /* .main-text, .sub-head, .jump-to-menu */
 .home-container {
     margin: 12px;
@@ -19,3 +52,5 @@
     align-items: flex-start;
     gap: 12px;
 }
+
+/* HOME PAGE ----------  */
