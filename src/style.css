@@ -12,6 +12,7 @@
 :root {
     --btn-font-size: 16px;
     --btn-font-color: white;
+    --btn-border-clr: rgb(97, 97, 97);
 
     --bg-color-1: black;
     --font-color: white;
@@ -97,15 +98,23 @@
 
 
 /* MENU PAGE ---------- */
+
+.menu-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cate-container {
     border: 1px solid red;
     margin: 24px;
     
     max-width: 600px;
-    box-sizing: content-box;
+    box-sizing: border-box;
+}
 
-    display: flex;
-    flex-direction: column;
+.cate-name {
+    margin-bottom: 12px;
 }
 
 .cards-container {
@@ -116,12 +125,23 @@
     gap: 6px;
 }
 
+@media  (max-width: 500px){
+    .cards-container {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+    
+}
+
 .item-container {
     padding: 12px;
-    border: 1px solid blue;
+    border: 1px solid var(--btn-border-clr);
     border-radius: 6px;
+
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
 
 
     max-width: 270px;
@@ -130,7 +150,6 @@
 .menu-name, .price-value {
     font-weight: bold;
     font-size: 1.2em;
-
 }
 
 .menu-desc {

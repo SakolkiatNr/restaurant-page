@@ -1,16 +1,23 @@
 export function renderMenu(container) {
+    // header
     const heading = document.createElement('h1');
     heading.classList.add('menu-header');
     heading.textContent = 'Our Selections';
-    container.append(heading);
 
+    // Menu container 
     const menuObj = new Menu();
+    const menuContainer = document.createElement('div');
+    menuContainer.classList.add('menu-page-container');
 
-    // append each category element to container
+    menuContainer.append(heading);
+
+    // append each category element to menu container
     menuData.forEach(cat => {
         const categoryElement = menuObj.category(cat.category, cat.items);
-        container.append(categoryElement);
+        menuContainer.append(categoryElement);
     });    
+
+    container.append(menuContainer);
 }
 
 class Menu {
