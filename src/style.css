@@ -172,9 +172,29 @@ body {
     /* align-items: center; */
     justify-content: center;
 
-
+    position: relative;
     max-width: 270px;
     min-height: 180px;
+
+    transition: all 1s ease-in-out;
+}
+
+.item-container:hover::before {
+    /* background-color: blue; */
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+
+    background: linear-gradient(45deg,rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 33%, rgba(21, 17, 105, 1) 49%, rgba(9, 9, 121, 1) 61%, rgba(0, 212, 255, 1) 100%);
+    background-size: 600%;
+
+    width: calc(100% );
+    height: calc(100% );
+    filter: blur(50px);
+
+    animation: glowing 50s linear infinite;
 }
 
 .menu-name, .price-value {
