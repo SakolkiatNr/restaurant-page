@@ -161,6 +161,15 @@
 
 
 /* CONTACT PAGE ---------- */
+
+.contact-container {
+    margin-top: 100px;   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contact-info-container {
     border: 1px solid var(--btn-border-clr);
     border-radius: 12px;
