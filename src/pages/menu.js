@@ -25,8 +25,13 @@ class Menu {
         categoryName.textContent = `${name}`;
         category.appendChild(categoryName);
 
+        // cards container
+        const cardContainer = document.createElement('div');
+        cardContainer.classList.add('cards-container');
+        category.appendChild(cardContainer);
+
         // add multiple menu to category
-        items.forEach(item => category.append(this.menu(item.name, item.desc, item.price)));
+        items.forEach(item => cardContainer.append(this.menu(item.name, item.desc, item.price)));
         return category;
     }
 

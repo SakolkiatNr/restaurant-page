@@ -18,7 +18,8 @@
 
 
 } 
-
+/* TODO */
+/* add sea like effect maybe a gradient at home page */
 
 /* Navigator ---------- */
 .nav-container {
@@ -88,3 +89,17 @@
 }
 
 /* HOME PAGE ----------  */
+
+
+/* MENU PAGE */
+.cate-container {
+    border: 1px solid red;
+    margin: 24px;
+
+    display: flex;
+    flex-direction: column;
+}
+.item-container {
+    border: 1px solid blue;
+
+}
