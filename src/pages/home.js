@@ -13,11 +13,10 @@ export function renderHome(container) {
     text2.textContent = 'Home of the Krabby Patty — secret formula definitely not written on this website.';
 
     const btn = document.createElement('button');
-    btn.classList.add('jump-to-menu', 'menu');
+    btn.classList.add('jump-to-menu', 'menu', 'btn');
     btn.setAttribute('id', 'menu');
     btn.textContent = 'Feed Me Krabby Patties';
 
     textContainer.append(text1, text2, btn);
     container.append(textContainer);
 }
-

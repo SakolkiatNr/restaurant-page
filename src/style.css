@@ -5,7 +5,11 @@
     box-sizing: border-box;
     font-family: sans-serif, helvetica, monospace, system-ui;
 }
-
+/* Navigator  */
+.nav-container {
+    display: flex;
+    flex-flow: row wrap;
+}
 
 /* .main-text, .sub-head, .jump-to-menu */
 .home-container {
