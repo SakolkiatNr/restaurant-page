@@ -33,6 +33,7 @@ body {
     color: white;
     margin: 24px;
 }
+
 .logo {
     margin-left: 24px;
 }
@@ -40,17 +41,21 @@ body {
 #nav-btns {
     margin-right: 24px;
     display: flex;
-    gap: 12px;
+    /* gap: 12px; */
     margin-left: 24px;
 }
 #nav-btns button{
     background-color: var(--bg-color-1);
     border: none;
-    padding: 12px 6px;
+    padding: 12px 12px;
 
     font-size: var(--btn-font-size);
     color: var(--btn-font-color);
     font-weight: bold;
+}
+
+#nav-btns button:hover {
+    color: blue;
 }
 
 
