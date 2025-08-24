@@ -106,7 +106,7 @@
 }
 
 .cate-container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 24px;
     
     max-width: 600px;
@@ -158,3 +158,18 @@
 }
 
 /* MENU PAGE ---------- */
+
+
+/* CONTACT PAGE ---------- */
+.contact-info-container {
+    border: 1px solid var(--btn-border-clr);
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+
+    max-width: 500px;
+}
+
+.contact-ps {
+    margin-top: 48px;
+}
