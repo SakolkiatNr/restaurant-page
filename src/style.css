@@ -5,3 +5,10 @@
     box-sizing: border-box;
     font-family: sans-serif, helvetica, monospace, system-ui;
 }
+
+
+/* .main-text, .sub-head, .jump-to-menu */
+.home-container {
+    margin: 12px;
+    display: flex;
+}
